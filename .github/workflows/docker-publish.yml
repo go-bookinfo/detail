@@ -102,7 +102,7 @@ jobs:
         run: |
           git clone --depth 1 https://gustjd887:${{ secrets.GIT_TOKEN }}@github.com/go-bookinfo/helm.git
           cd helm
-          sed -i 's/tag: .*$/tag: "'${ steps.meta.outputs.tags }'"/g' detail/values.yaml
+          sed -i 's/tag: .*$/tag: "'${{ steps.meta.outputs.tags }}'"/g' detail/values.yaml
           git config user.name "GitHub Actions"
           git config user.email "action@github.com"
           git add .
