@@ -37,5 +37,5 @@ func main() {
 	http.HandleFunc("/detail", func(w http.ResponseWriter, r *http.Request) {
 		w.Write(bs)
 	})
-	http.ListenAndServe(":8000", nil)
+	http.ListenAndServe(":80", nil)
 }
